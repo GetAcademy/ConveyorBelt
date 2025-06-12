@@ -10,7 +10,7 @@ class ConveyorBelt extends HTMLElement {
               overflow:hidden;border:1px solid #ccc}
 
         /* ───── Båndets bakgrunn (samme som du allerede har) ───── */
-        .belt{width:100%;height:100%;background-size:20px 20px;animation:2.4s linear infinite}
+        .belt{width:100%;height:100%;background-size:20px 20px;animation:0.6s linear infinite}
         .up-right,.down-left {background-image:repeating-linear-gradient(135deg,#666 0 10px,#999 10px 20px)}
         .up-left ,.down-right{background-image:repeating-linear-gradient( 45deg,#666 0 10px,#999 10px 20px)}
         @keyframes belt-up-right  {from{background-position:0 0}to{background-position: 20px -20px}}
