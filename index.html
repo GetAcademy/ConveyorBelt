@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Document</title>    
 </head>
 <body>
-    <div style="width: 200px">
-        <conveyor-belt id="a1" direction="right"></conveyor-belt>
-        <conveyor-belt id="a2" direction="down"></conveyor-belt>
-        <conveyor-belt id="b1" direction="up"></conveyor-belt>
-        <conveyor-belt id="b2" direction="left"></conveyor-belt>
-    </div>
+<div style="width: 210px;">
+    <conveyor-belt id="a1" direction="up-right" autospawn></conveyor-belt>
+    <conveyor-belt id="a2" direction="down-right"></conveyor-belt>
+    <conveyor-belt id="b1" direction="up-left"></conveyor-belt>
+    <conveyor-belt id="b2" direction="down-left"></conveyor-belt>
+</div>
+
+    <script type="module" src="./ConveyorBelt.js"></script>
 </body>
 </html>
