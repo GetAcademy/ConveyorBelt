@@ -10,29 +10,13 @@ class ConveyorBelt extends HTMLElement {
               overflow:hidden;border:1px solid #ccc}
 
         /* ───── Båndets bakgrunn (samme som du allerede har) ───── */
-        .belt{
-        width:100%; height:100%;
-        background-size:20px 20px;
-        animation-duration:1.6s;   /* var 0.6 s eller 2.4 s før */
-        animation-timing-function:linear;
-        animation-iteration-count:infinite;
-        }
+        .belt{width:100%;height:100%;background-size:20px 20px;animation:2.4s linear infinite}
         .up-right,.down-left {background-image:repeating-linear-gradient(135deg,#666 0 10px,#999 10px 20px)}
         .up-left ,.down-right{background-image:repeating-linear-gradient( 45deg,#666 0 10px,#999 10px 20px)}
-        /* 2 ▸ koffertens fire reiser – midt i ruten ±25 px */
-        /* 100 × 100 rute, emoji 24 × 24 → ±38 px holder hele emoji innenfor */
-        @keyframes travel-up-right  { from { transform: translate(-50%,-50%) translate(-38px, 38px);}
-                                    to   { transform: translate(-50%,-50%) translate( 38px,-38px);} }
-
-        @keyframes travel-down-right{ from { transform: translate(-50%,-50%) translate(-38px,-38px);}
-                                    to   { transform: translate(-50%,-50%) translate( 38px, 38px);} }
-
-        @keyframes travel-up-left   { from { transform: translate(-50%,-50%) translate( 38px, 38px);}
-                                    to   { transform: translate(-50%,-50%) translate(-38px,-38px);} }
-
-        @keyframes travel-down-left { from { transform: translate(-50%,-50%) translate( 38px,-38px);}
-                                    to   { transform: translate(-50%,-50%) translate(-38px, 38px);} }
- 
+        @keyframes belt-up-right  {from{background-position:0 0}to{background-position: 20px -20px}}
+        @keyframes belt-down-right{from{background-position:0 0}to{background-position: 20px  20px}}
+        @keyframes belt-up-left   {from{background-position:0 0}to{background-position:-20px -20px}}
+        @keyframes belt-down-left {from{background-position:0 0}to{background-position:-20px  20px}}
         .up-right  {animation-name:belt-up-right}
         .down-right{animation-name:belt-down-right}
         .up-left   {animation-name:belt-up-left}
